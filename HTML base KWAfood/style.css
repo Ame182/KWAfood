@@ -68,13 +68,18 @@ nav{
 
 }
 
-.promo{
+.dia{
 	height: 20vh;
 	border-style: solid;
 	border-color: grey;
-	border-width: 0.1px;
-	margin: 5px; 
+	border-width: 0.1px; 
 	padding: 10px;
+}
+
+.dia h5{
+	text-align: center;
+	background-color: rgba(000,000,000,0.4);
+	color: white;
 }
 
 .contact{
@@ -226,4 +231,25 @@ footer i{
 	margin-left: 20px;
 }
 
+.gallery{
+	padding: 40px;
 
+}
+
+.gall{
+	filter: saturate(0%);
+	width: 10%;
+	height: 10%;
+	margin: 5px;
+} 
+
+.satura{
+	filter: saturate(100%);
+	transition: 1s;
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	z-index: 10;
+	object-position: center;
+	margin-left: 20%;
+}
