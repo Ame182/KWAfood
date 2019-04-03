@@ -17,6 +17,7 @@
 
 	<!-- My Styles -->
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="lity.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
 
 		</div>
 		
-		
+
 		<!-- Termina el Nav -->
 
 		<!-- Carrusel -->
@@ -91,29 +92,46 @@
 	<!-- Termina el carrusel -->
 
 	</header>
-	
+
 	<!-- fast menu -->
 	<section class="p-0" id="fastmenu">
 		<div class="container-fluid">
 			<div class="row fast">
-				<div class="col-lg-2 col-md-6 mensaje-diario">
-					<h5>LUNES</h5>
+				<div class="col-lg-2 col-md-6 dia l" data-page="lunes">
+					<div class="di hide lun">
+						<h2>2x1</h2>
+						<h4>EMPANADAS</h4>
+					</div>
+				</div>	
+				<div class="col-lg-2 col-md-6 dia m" data-page=" martes">
+					<div class="di hide mar">
+						<h2>BEBIDAS GRATIS</h2>
+						
+					</div>
 				</div>
-				<div class="col-lg-2 col-md-6 dia">
-					<h5>MARTES</h5>
+				<div class="col-lg-2 col-md-6 dia mi" data-page=" miercoles">
+					<div class="di hide mie">
+						<h2>$2.600</h2>
+						<h4>SANDWICH + BEBIDA</h4>
+					</div>					
 				</div>
-				<div class="col-lg-2 col-md-6 dia">
-					<h5>MIERCOLES</h5>
+				<div class="col-lg-2 col-md-6 dia ju" data-page=" jueves">
+					<div class="di hide jue">
+						<h2>$4.000</h2>
+						<h4>10 TEQUEÑOS</h4>
+					</div>					
 				</div>
-				<div class="col-lg-2 col-md-6 dia">
-					<h5>JUEVES</h5>
+				<div class="col-lg-2 col-md-6 dia vi" data-page=" viernes">
+					<div class="di hide vie">
+						<h2>2x1</h2>
+						<h4>ESALADAS</h4>
+					</div>					
 				</div>
-				<div class="col-lg-2 col-md-6 dia">
-					<h5>VIERNES</h5>
-				</div>
-				<div class="col-lg-2 col-md-6 dia">
-					<h5>SABADO / DOMINGO</h5>
-					<div class="mensaje-diario"></div>
+				<div class="col-lg-2 col-md-6 dia sado" data-page=" sabadom">
+					<div class="di hide sa">
+						<h2>$3.000</h2>
+						<h4>SOPA, SECO Y JUGO</h4>
+					</div>					
 				</div>
 			</div>	
 		</div>
@@ -247,12 +265,16 @@
 	<section id="contact">
 		<div class="container-fluid">
 			<div class="row contacto">
-				<div class="col-md-6 rrss">
+				<img src="images/contacto.png" class="title" alt="">
+			</div>
+			<div class="row">
+				<div class="col-md-5 rrss">
 					<div class="instagram">
 						
 					</div>
 				</div>
-				<div class="col-md-6 coment">
+				<div class="col-md-1"></div>
+				<div class="col-md-5 coment">
 					<h2>Comenta y lo compartimos en nuestras RRSS</h2>
 					<form>
 					  <div class="form-group">
@@ -326,10 +348,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<!-- Script Js -->
-	<script src="app.js"></script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="/js/plugins/dailyMessages.min.js"></script>
+	<script src="app.js"></script>
+	<script src="lity.js"></script>
 	
 </body>
 </html>
