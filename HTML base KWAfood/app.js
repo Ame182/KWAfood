@@ -63,6 +63,21 @@ $(function () {
   });
 });
 
+$(function (){
+var url = 'https://api.instagram.com/oembed?url=https://www.instagram.com/p/BpMiaXVFh4U/'
+
+ $.ajax ({
+   url: url,
+   method: 'GET',
+})
+ .then(function (data){
+   console.log(data);
+   $(".instagram").append(data.html);
+   $(".instagram").prepend('<h2>POST DE INSTAGRAM</h2>');
+
+   });
 
 });
+
+
 
