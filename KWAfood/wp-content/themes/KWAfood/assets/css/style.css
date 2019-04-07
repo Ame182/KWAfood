@@ -167,7 +167,7 @@ nav{
 
 
 .l{
-	background-image: url(images/lunes.svg);
+	background-image: url(../images/lunes.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
@@ -177,7 +177,7 @@ nav{
 }
 
 .m{
-	background-image: url(images/martes.svg);
+	background-image: url(../images/martes.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
@@ -187,7 +187,7 @@ nav{
 }
 
 .mi{
-	background-image: url(images/miercoles.svg);
+	background-image: url(../images/miercoles.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
@@ -197,7 +197,7 @@ nav{
 }
 
 .ju{
-	background-image: url(images/jueves.svg);
+	background-image: url(../images/jueves.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
@@ -207,7 +207,7 @@ nav{
 }
 
 .vi{
-	background-image: url(images/viernes.svg);
+	background-image: url(../images/viernes.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
@@ -217,7 +217,7 @@ nav{
 }
 
 .sado{
-	background-image: url(images/sabadom.svg);
+	background-image: url(../images/sabadom.svg);
 	background-repeat: no-repeat;
 	object-position: 80%;
 	background-size: 70%;
