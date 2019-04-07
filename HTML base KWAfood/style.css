@@ -1,7 +1,11 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	background-image: url();
 	object-position: 50% 50%;
 	object-fit: cover;
+	font-family: 'Raleway', sans-serif;
 }
 
 img{
@@ -337,6 +341,10 @@ nav{
 
 .coment form{
 	margin-top: 50px;
+}
+
+.recentco{
+	width: 100%
 }
 
 iframe{

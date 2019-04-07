@@ -33,19 +33,22 @@ $(document).ready(function() {
 		e.preventDefault()
     	$('.hide.sa').toggle('hide')
 
-    });
+	});
+});   
     
 
 
 //GALERIA
 
+$(document).ready(function() {
 $(function(){
   $('.gall').click(function(){
       $('.satura').not(this).removeClass('satura');
       $(this).toggleClass('satura');
       
 
-  });
+		});
+	});
 });
 
 
@@ -77,6 +80,21 @@ var url = 'https://api.instagram.com/oembed?url=https://www.instagram.com/p/BpMi
 
    });
 
+});
+
+
+//COMENTARIOS
+$('#boton').on("click", function() {
+  var url = 'https://jsonplaceholder.typicode.com';
+
+  var id = parseInt(Math.random() * 100);
+
+  $.ajax({
+    url: url + '/posts/' + id,
+    method: 'GET'
+  }).then(function(data) {
+      $('#tabla').prepend('<tr> <td>' + data.title + '</td><td>' + '<p>' + data.body + '</p>' + '</td></tr>')
+    });
 });
 
 
