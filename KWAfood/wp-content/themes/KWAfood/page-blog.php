@@ -1,10 +1,27 @@
-<div class="col-md-4 mt-5">
-	<?php if (has_post_thumbnail() ) {
-		the_post_thumbnail('custom-size-blog', array('class' => 'img-fluid mb-3'));
-	 } else { ?>
-	 	<img src="<?php echo get_theme_file_uri('assets/images/blognopic.jpg') ?>" class="img-fluid mb-3">
-	<?php } ?>
-	<h2><?php the_title() ?></h2>
-	<p><?php the_excerpt() ?></p>
-	<a class="btn btn-dark" href="<?php get_permalink() ?>">Lee más</a>
-</div>
+<?php get_header(); ?>
+
+<section>
+	<div class="container-fluid blog">
+		<div class="row">
+		<?php
+			$arg =array(
+				'post_type' => 'post',
+				'posts_per_page' => -1
+			);
+
+			$get_arg = new WP_Query($arg);
+
+			while ($get_arg->have_posts()) {
+				$get_arg->the_post();
+			?>
+			<?php echo get_template_part('_includes/loop' , 'posts'); ?>
+
+	<?php } wp_reset_postdata(); ?>
+
+
+
+		</div>
+   </div>	
+</section>
+
+<?php get_footer(); ?>

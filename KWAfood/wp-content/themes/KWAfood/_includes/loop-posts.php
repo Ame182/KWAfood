@@ -1,4 +1,4 @@
-<div class="col-md-4 mt-5">
+<div class="col-md-4 mt-5 p-5">
 	<?php if (has_post_thumbnail() ) {
 		the_post_thumbnail('custom-size-blog', array('class' => 'img-fluid mb-3'));
 	 } else { ?>

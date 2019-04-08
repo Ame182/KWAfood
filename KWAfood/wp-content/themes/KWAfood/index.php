@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <section>
 	<div class="container-fluid blog">
 		<div class="row">
@@ -23,6 +24,7 @@
 		</div>
    </div>	
 </section>
+
 
 <?php get_footer(); ?>
 
