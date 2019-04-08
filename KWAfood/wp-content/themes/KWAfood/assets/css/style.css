@@ -472,3 +472,17 @@ div.infoExtra {
 	vertical-align: middle;
 
 }
+
+div#post-jumbotron{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#menu-mi_menu li a{
+	color: black;
+	padding: 2px;
+	margin: 1px;
+}
+

@@ -43,8 +43,8 @@
     wp_register_script('easingJquery', get_parent_theme_file_uri ('/assets/vendor/js/jquery.easing.min.js'), array('jquery_migrate'), null, true);
     wp_register_script('scrollreveal', get_parent_theme_file_uri ('/assets/vendor/js/scrollreveal.min.js'), array('jquery_migrate'), null, true);
     wp_register_script('macnificPopup', get_parent_theme_file_uri ('/assets/vendor/js/jquery.magnific-popup.min.js'), array('jquery_migrate'), null, true);
-    wp_register_style('lity', get_parent_theme_file_uri('assets/vendor/js/lity.js'), null, '3.0.0', true);
-    wp_register_script('mainJS', get_parent_theme_file_uri ('assets/js/script.js'), array('jQuery3'), null, true);
+    wp_register_style('lityjs', get_parent_theme_file_uri('assets/vendor/js/lity.js'), null, '3.0.0', true);
+    wp_register_script('mainJS', get_parent_theme_file_uri('assets/js/script.js'), array('jQuery3'), null, true);
 
     /* Enqueue scripts */
 
@@ -52,6 +52,7 @@
     wp_enqueue_script('easingJquery');
     wp_enqueue_script('scrollreveal');
     wp_enqueue_script('magnificPopup');
+    wp_enqueue_script('lityjs');
     wp_enqueue_script('mainJS');
 
     }
@@ -60,18 +61,17 @@
 
 
 //Logo Personalizado
-    function config_custom_logo() {
-        add_theme_support('custom-logo' , array(
-            'height'      => 100,
-            'width'       => 400,
-            'flex-height' => true,
-            'flex-width'  => true,
-            'header-text' => array('site-title', 'site-description'),
-        ));
-    }
+	function config_custom_logo() {
+		add_theme_support('custom-logo' , array(
+			'height'	  => 100,
+			'width'		  => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array('site-title', 'site-description'),
+		));
+	}
 
-    add_action('after_setup_theme', 'config_custom_logo');
-
+	add_action('after_setup_theme', 'config_custom_logo');
 
 //Tamaños personalizados de imagenes
 
@@ -104,3 +104,22 @@
   }
 
   add_action( 'after_setup_theme', 'thumbnails_setup' );
+
+
+//Menus personalizados
+
+
+	function menus_setup() {
+		register_nav_menus(
+			array(
+				'header-menu'	=> __( 'Header Menu' ),
+				'footer-menu'	=> __( 'Footer Menu' ),
+			)
+		);
+	}
+
+	add_action( 'after_setup_theme', 'menus_setup' );
+
+
+
+?>
