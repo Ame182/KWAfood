@@ -74,102 +74,41 @@
 </section>
 
 <!-- Comienza la Carta -->
-<section class="p-0" id="lacarta">
-	<div class="container-fluid">
-	  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta.svg" class="title" alt="la carta">
-	</div>
+<section class="p-0" id="portfolio">
   <div class="container-fluid p-0">
+    <h2 class="section-heading text-center p-2">Últimos trabajos</h2>
+    <hr class="my-4">
     <div class="row no-gutters popup-gallery">
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/clubhouse.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Club House
+      <?php
+        $arg = array(
+          'post_type'		 => 'carta',
+          'posts_per_page' => 6
+        );
+
+        $get_arg = new WP_Query( $arg );
+
+        while ( $get_arg->have_posts() ) {
+          $get_arg->the_post();
+        ?>
+
+          <div class="col-lg-4 col-sm-6">
+            <a class="lacarta-box" href="<?php the_post_thumbnail_url( 'large' ); ?>">
+              <?php the_post_thumbnail( '', array( 'class' => 'img-fluid' ) ); ?>
+              <div class="lacarta-box-caption">
+                  <div class="lacarta-box-caption-content">
+                    <div class="project-category text-faded">
+                      <?php the_title() ?>
+                    </div>
+                    <div class="project-name">
+                      <p><?php the_content() ?></p>
+                    </div>
+                  </div>
               </div>
-              <div class="project-name">
-                Sandwich delicioso
-              </div>
-            </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/tequeños.jpg">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/tequeños.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Tequeños
-              </div>
-              <div class="project-name">
-              Delicia
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/empanadas.jpg">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/empanadas.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Empanadas
-              </div>
-              <div class="project-name">
-                Consulta lña carta del día
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/sandpollo.jpg">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/sandpollo.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Sandwich de Pollo
-              </div>
-              <div class="project-name">
-                MDelicia de pechuga
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/sandvege.jpg">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/sandvege.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Sandwich Vegetariano
-              </div>
-              <div class="project-name">
-                  Champi
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a class="lacarta-box" href="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/golfeados.jpg">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta/golfeados.jpg" alt="">
-          <div class="lacarta-box-caption">
-            <div class="lacarta-box-caption-content">
-              <div class="project-category text-faded">
-                Golfeados
-              </div>
-              <div class="project-name">
-                delicioso dulce
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
+
+        <?php } wp_reset_postdata();
+      ?>
     </div>
   </div>
 </section>
@@ -184,9 +123,8 @@
 		</div>
 		<div class="row us">
 			<div class="col-md-6" id="nosotros">
-				<p>KWA food trae a ti la sazon de la comida venezolano. Cada plato se elabora con el cariño que nos ofrece nuestra tierra. <br>
-				Representando al pueblo de Cagua en el estado Aragua, perfectamente ubicado en el centro del pais, muy cerca de las costas del mar Caribe.</p>
-				
+			<h2><?php the_field('us_title'); ?></h2>
+			<p><?php the_field('nosotros'); ?></p>	
 			</div>
 			<div class="col-md-6" id="nosotrosImg">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Plaza_Bolívar_de_Cagua.jpg" alt="plaza de Cagua">
