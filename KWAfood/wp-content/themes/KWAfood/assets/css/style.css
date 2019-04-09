@@ -19,8 +19,22 @@ nav{
 	background-color: rgba(255,255,255,0.8);
 }
 
+nav .container{
+	width: 100%;
+	margin-left: 70px;
+}
+
+nav .container ul li{
+	padding: 5px;
+}
+
+nav .container ul last-child li{
+	color: white;
+}
+
+
 .collapse{
-	padding-left: 65%;
+	padding-left: 50%;
 }
 
 
@@ -32,6 +46,17 @@ nav{
 	border-bottom-left-radius: 10%;
 }
 
+.magictime {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.puffIn {
+  -webkit-animation-name: puffIn;
+          animation-name: puffIn;
+}
 
 #logoAbsoluto {
 	width: 100%;
@@ -83,7 +108,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .mar{
@@ -96,7 +121,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .mie{
@@ -109,7 +134,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .jue{
@@ -122,7 +147,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .vie{
@@ -135,7 +160,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .sa{
@@ -148,7 +173,7 @@ nav{
 	opacity: 7;
 	color: #fff;
 	background: rgba(240, 95, 64, 0.9);
-	padding: 30px;
+	padding: 25px;
 }
 
 .hide {
@@ -483,6 +508,12 @@ div#post-jumbotron{
 #menu-mi_menu li a{
 	color: black;
 	padding: 2px;
-	margin: 1px;
+	width: 100%;
+}
+
+#menu-item-32{
+	color: white;
+	width: 80px;
+
 }
 

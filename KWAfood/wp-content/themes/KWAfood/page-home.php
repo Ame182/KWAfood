@@ -74,11 +74,14 @@
 </section>
 
 <!-- Comienza la Carta -->
-<section class="p-0" id="portfolio">
+<section class="p-0" id="lacarta">
   <div class="container-fluid p-0">
-    <h2 class="section-heading text-center p-2">Últimos trabajos</h2>
     <hr class="my-4">
+    <div class="row lacar">
+    	 <img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta.svg">
+    </div>
     <div class="row no-gutters popup-gallery">
+
       <?php
         $arg = array(
           'post_type'		 => 'carta',
@@ -138,7 +141,7 @@
 <section id="contact">
 	<div class="container-fluid">
 		<div class="row contacto">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contacto.png" class="title" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contacto.png" class="title animated bounce" alt="">
 		</div>
 		<div class="row">
 			<div class="col-md-5 rrss">

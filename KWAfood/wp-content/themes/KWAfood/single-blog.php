@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+AREPA
 <section>
 	<div class="container-fluid blog">
 		<div class="row">

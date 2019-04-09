@@ -5,22 +5,28 @@
         $theme_data = wp_get_theme();
 
     /* Registrando Stilos */
+ 
     wp_register_style('bootstrap', get_parent_theme_file_uri('/assets/vendor/css/bootstrap.css'), null, '1.0.0', 'screen');
     wp_register_style('fontawesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', null, '1.0.0', 'screen');
     wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Raleway|Roboto');
     wp_register_style('magnificPopup', get_parent_theme_file_uri('/assets/vendor/css/magnific-popup.css'), null, '1.0.0', 'screen');
     wp_register_style('lity', get_parent_theme_file_uri('assets/vendor/css/lity.css'), null , '3.0.0' , 'screen');
+    wp_register_style('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', null, '2.3.1', 'screen');
+	wp_register_style('animate', get_parent_theme_file_uri('assets/vendor/css/animate.css'), null, '3.7.0', 'screen');
     wp_register_style('main', get_parent_theme_file_uri('assets/css/style.css'), null, '1.0.0', 'screen');
 
     
 
 
     /* Enqueue estilos */
+    wp_enqueue_style('jquery');
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('fontawesome');
     wp_enqueue_style('googleFonts');
     wp_enqueue_style('magnificPopup');
     wp_enqueue_style('lity');
+    wp_enqueue_style('aos');
+    wp_enqueue_style('animate');
     wp_enqueue_style('main');
 
     }
@@ -35,25 +41,16 @@
 
     /* Deregister scripts*/
 
-
+    wp_deregister_script('jquery');
 
     /* Registrando Scripts */
 
-    wp_register_script('bootstrap', get_parent_theme_file_uri ('/assets/vendor/js/bootstrap.min.js'), array('jquery_migrate'), null, true);
-    wp_register_script('easingJquery', get_parent_theme_file_uri ('/assets/vendor/js/jquery.easing.min.js'), array('jquery_migrate'), null, true);
-    wp_register_script('scrollreveal', get_parent_theme_file_uri ('/assets/vendor/js/scrollreveal.min.js'), array('jquery_migrate'), null, true);
-    wp_register_script('macnificPopup', get_parent_theme_file_uri ('/assets/vendor/js/jquery.magnific-popup.min.js'), array('jquery_migrate'), null, true);
-    wp_register_style('lityjs', get_parent_theme_file_uri('assets/vendor/js/lity.js'), null, '3.0.0', true);
-    wp_register_script('mainJS', get_parent_theme_file_uri('assets/js/script.js'), array('jQuery3'), null, true);
-
-    /* Enqueue scripts */
-
-    wp_enqueue_script('bootstrap');
-    wp_enqueue_script('easingJquery');
-    wp_enqueue_script('scrollreveal');
-    wp_enqueue_script('magnificPopup');
-    wp_enqueue_script('lityjs');
-    wp_enqueue_script('mainJS');
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', null, '3.3.1', 'screen');
+    wp_enqueue_script('bootstrap', get_parent_theme_file_uri ('/assets/vendor/js/bootstrap.min.js'), array('jquery_migrate'), null, true);
+    wp_enqueue_script('macnificPopup', get_parent_theme_file_uri ('/assets/vendor/js/jquery.magnific-popup.min.js'), array('jquery_migrate'), null, true);
+    wp_enqueue_script('lityjs', get_parent_theme_file_uri('assets/vendor/js/lity.js'), null, '3.0.0', true);
+    wp_enqueue_script('aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', 'jquery', '2.3.1', 'screen');
+    wp_enqueue_script('mainJS', get_parent_theme_file_uri('assets/js/script.js'), array('jquery'), null, true);
 
     }
 

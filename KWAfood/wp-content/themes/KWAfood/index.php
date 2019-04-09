@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-
+INDEX
 <section>
 	<div class="container-fluid blog">
-		<div class="row">
+		<div data-aos="fade-right" class="row">
 		<?php
 			$arg =array(
 				'post_type' => 'post',

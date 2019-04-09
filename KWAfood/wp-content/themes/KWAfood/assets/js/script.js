@@ -3,6 +3,7 @@ $(document).ready(function() {
 		e.preventDefault()
     	$('.hide.lun').toggle('hide')  
     });
+  });
 
 
     $(".dia.m").hover( function(e) {
@@ -34,7 +35,7 @@ $(document).ready(function() {
     	$('.hide.sa').toggle('hide')
 
 	});
-});   
+   
     
 
 
@@ -66,21 +67,6 @@ $(function () {
   });
 });
 
-$(function (){
-var url = 'https://api.instagram.com/oembed?url=https://www.instagram.com/p/BpMiaXVFh4U/'
-
- $.ajax ({
-   url: url,
-   method: 'GET',
-})
- .then(function (data){
-   console.log(data);
-   $(".instagram").append(data.html);
-   $(".instagram").prepend('<h2>POST DE INSTAGRAM</h2>');
-
-   });
-
-});
 
 
 //COMENTARIOS
@@ -98,10 +84,20 @@ $('#boton').on("click", function() {
 });
 
 //menu
-$(document).ready(function() {
-$('#menu-mi_menu li').addClass('nav-item').children(this).addClass('nav-link js_scroll-trigger');
+  $(document).ready(function() {
+  $('#menu-mi_menu li').addClass('nav-item').children(this).addClass('nav-link js_scroll-trigger');
 
-$('.nav-item:last-of-type a').addClass('btn btn-primary').removeClass('js-scroll-trigger');
-}
+  $('.nav-item:last-of-type a').addClass('btn btn-secondary').removeClass('js-scroll-trigger');
+  });
+
+
+//animate
+$('.title').hover(function () {
+  $(this).addClass('bounce');
+});
+
+
+//AOS
+AOS.init();
 
 
