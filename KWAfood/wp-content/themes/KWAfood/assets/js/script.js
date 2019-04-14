@@ -1,14 +1,14 @@
-$(document).ready(function() {
-    $(".dia.l").hover( function(e) {
+jQuery(document).ready(function() {
+    jQuery(".dia.l").hover( function(e) {
 		e.preventDefault()
-    	$('.hide.lun').toggle('hide')  
+    	jQuery('.hide.lun').toggle('hide')  
     });
   });
 
 
-    $(".dia").hover( function(e) {
+    jQuery(".dia").hover( function(e) {
 		e.preventDefault()
-    	$(this).find('.hide').toggle('hide')
+    	jQuery(this).find('.hide').toggle('hide')
 
     });
 
@@ -17,11 +17,11 @@ $(document).ready(function() {
 
 //GALERIA
 
-$(document).ready(function() {
-$(function(){
-  $('.gall').click(function(){
-      $('.satura').not(this).removeClass('satura');
-      $(this).toggleClass('satura');
+jQuery(document).ready(function() {
+jQuery(function(){
+  jQuery('.gall').click(function(){
+      jQuery('.satura').not(this).removeClass('satura');
+      jQuery(this).toggleClass('satura');
       
 
 		});
@@ -32,44 +32,44 @@ $(function(){
 
 //NOTICIAS
 
-$(function () {
-  $(".leerMas").bind("click", function () { });
+jQuery(function () {
+  jQuery(".leerMas").bind("click", function () { });
 });
 
-$(function () {
-  $(".leerMas").bind("click", function () {
-    $(this).text($(this).text() == "Leer más" ? "Ocultar" : "Leer más");
-    $(this).prev().slideToggle();
+jQuery(function () {
+  jQuery(".leerMas").bind("click", function () {
+    jQuery(this).text(jQuery(this).text() == "Leer más" ? "Ocultar" : "Leer más");
+    jQuery(this).prev().slideToggle();
   });
 });
 
 
 
 //COMENTARIOS
-$('#boton').on("click", function() {
+jQuery('#boton').on("click", function() {
   var url = 'https://jsonplaceholder.typicode.com';
 
   var id = parseInt(Math.random() * 100);
 
-  $.ajax({
+  jQuery.ajax({
     url: url + '/posts/' + id,
     method: 'GET'
   }).then(function(data) {
-      $('#tabla').prepend('<tr> <td>' + data.title + '</td><td>' + '<p>' + data.body + '</p>' + '</td></tr>')
+      jQuery('#tabla').prepend('<tr> <td>' + data.title + '</td><td>' + '<p>' + data.body + '</p>' + '</td></tr>')
     });
 });
 
 //menu
-  $(document).ready(function() {
-  $('#menu-mi_menu li').addClass('nav-item').children(this).addClass('nav-link js_scroll-trigger');
+  jQuery(document).ready(function() {
+  jQuery('#menu-mi_menu li').addClass('nav-item').children(this).addClass('nav-link js_scroll-trigger');
 
-  $('.nav-item:last-of-type a').addClass('btn btn-secondary').removeClass('js-scroll-trigger');
+  jQuery('.nav-item:last-of-type a').addClass('btn btn-secondary').removeClass('js-scroll-trigger');
   });
 
 
 //animate
-$('.title').hover(function () {
-  $(this).addClass('bounce');
+jQuery('.title').hover(function () {
+  jQuery(this).addClass('bounce');
 });
 
 
@@ -79,5 +79,7 @@ AOS.init();
 
 //galeria
 // Bind as an event handler
-$(document).on('click', '[data-lightbox]', lity);
+jQuery(document).on('click', '[data-lightbox]', lity);
 
+//scroll
+// Select all links with hashes

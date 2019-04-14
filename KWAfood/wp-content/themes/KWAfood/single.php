@@ -12,11 +12,13 @@
 
 		?>
 
-    <div id="post-jumbotron" class="jumbotron p-5 md-3 text-white text-center" style="background-image: url('<?= $img ?>')">
-      <h2><?php the_title() ?></h2>
-      <p><time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time></p>
-    </div>
-
+    <div id="post-jumbotron" class="jumbotron p-10 md-5 text-white text-center" style="background-image: url('<?= $img ?>')"></div>
+    	<div class="row">
+    		<h2><?php the_title() ?></h2>
+    		<br>
+    		<hr>
+      		<p><time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time></p>
+    	</div>
     <?php the_content(); ?>
 
     <div class="text-center mb-5">

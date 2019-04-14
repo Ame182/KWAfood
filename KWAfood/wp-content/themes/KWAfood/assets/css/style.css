@@ -1,5 +1,6 @@
 html{
-	scroll-behavior: smooth;
+ scroll-behavior: smooth;
+ 
 }
 body{
 	background-image: url();
@@ -412,9 +413,6 @@ div.infoExtra {
 
 .gall{
 	filter: saturate(40%);
-	width: 200px;
-	height: 200px;
-	margin: 5px;
 } 
 
 .galle{
@@ -422,19 +420,12 @@ div.infoExtra {
 	margin-top: 30px;
 }
 
+.gal{
+	height: 900px;
+}
 .satura{
 	filter: saturate(100%);
 	transition: 1s;
-	width: 500px;
-	height: 500px;
-	position: absolute;
-	top: 30%;
-    left: 30%;
-    margin-top: -10px;
-    margin-left: -10px;
-	z-index: 10;
-	position: fixed;
-	vertical-align: middle;
 
 }
 
@@ -443,6 +434,10 @@ div#post-jumbotron{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+
+.jumbotron {
+	height: 300px;
 }
 
 #menu-mi_menu li a{

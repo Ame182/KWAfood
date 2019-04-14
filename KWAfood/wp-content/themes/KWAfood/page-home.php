@@ -2,7 +2,7 @@
 
 	<!-- Carrusel -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" id="logoAbsoluto" alt="Logo KWA food">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" class="animated bounce delay-2s" id="logoAbsoluto" alt="Logo KWA food">
 	  <div class="carousel-inner">
 
 	    <div class="carousel-item active">
@@ -74,7 +74,7 @@
     <hr class="my-4">
 	<div class="container titulo">
 		<div class="row">
-			<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+			<img class="title section-heading text-center p-6 animated bounce delay-2s" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
 			<span><?php the_field('la_carta'); ?></span>
 		</div>
 	</div>
@@ -121,8 +121,8 @@
 	<div class="container">
 		<div class="container titulo">
 			<div class="row">
-				<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
-				<span><?php the_field('historia'); ?></span>
+				<img class="title section-heading text-center p-6 animated bounce delay-2s" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+				<span ><?php the_field('historia'); ?></span>
 			</div>
 		</div>
 		<div class="row us">
@@ -143,41 +143,15 @@
 	<div class="container-fluid">
 		<div class="container titulo">
 			<div class="row">
-				<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+				<img class="title section-heading text-center p-6 animated bounce delay-2s" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
 				<span><?php the_field('contacto'); ?></span>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-5 rrss">
-			    <div class="recentco">
-			      <h1>Comentarios recientes</h1>
-			      <button type="button" id="boton" class="btn btn-dark">Publicar</button>
-			      <br><br>
-			      <table class="table table-striped table-hover" id="tabla">
-			        <tr>
-			          <th>Título</th>
-			          <th>Contenido</th>
-			        </tr>
-			      </table>
-			    </div>
-			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-5 coment">
+			<div class="col-md-12 rrss coment">
+			
 				<h2>Comenta y lo compartimos en nuestras RRSS</h2>
-				<form>
-				  <div class="form-group">
-				    <label for="exampleFormControlInput1">Email o Apodo:</label>
-				    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-				  </div>
-				  <div class="form-group">
-				    <label for="exampleFormControlTextarea1">Escribe tu experiencia o recomendación:</label>
-				    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-				  </div>
-				    <div class="form-group">
-				    <label for="exampleFormControlFile1">Adjunta imagen:</label>
-				    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-				  </div>
-			</form>
+				<?php echo do_shortcode(get_post_meta(get_the_id(), 'contacto_shortcode', true)); ?>
 		</div>
 	</div>
 </section>

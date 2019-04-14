@@ -3,7 +3,7 @@
 <div class="container titulo blog">
 	<div class="row">
 		
-		<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+		<img class="title section-heading text-center p-6 animated bounce delay-2s" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
 		<span> NOTICIAS<?php the_field('news'); ?></span>
 	</div>
 </div>
@@ -32,27 +32,30 @@
    </div>	
 </section>
 <section class="galeria">
-	<div class="row no-gutters popup-gallery ">
-      <?php
-        $arg = array(
-          'post_type'		 => 'imagenes',
-          'posts_per_page' => 6
-        );
+	<div class="container-fluid gal">
+		
+		<div class="row no-gutters popup-gallery gall">
 
-        $get_arg = new WP_Query( $arg );
+	      <?php
+	        $arg = array(
+	          'post_type'		 => 'galeria',
+	          'posts_per_page' => 6
+	        );
 
-        while ( $get_arg->have_posts() ) {
-          $get_arg->the_post();
-        ?>
+	        $get_arg = new WP_Query( $arg );
 
-          <div class="col-lg-4 col-sm-6">
-  			<img class="lacarta-box" href="<?php the_post_thumbnail_url( 'small' ); ?> data-lity data-lity-desc">
-              <?php the_post_thumbnail( 'data-lity', array( 'class' => 'img-fluid' ) ); ?>
-          </div>
+	        while ( $get_arg->have_posts() ) {
+	          $get_arg->the_post();
+	        ?>
 
-        <?php } wp_reset_postdata();
-      ?>
-    </div>
+			<?php echo get_template_part('_includes/loop' , 'gallery'); ?>
+
+	        <?php } wp_reset_postdata();
+	      ?>
+	    </div>
+	</div>
+	
+
 	
 </section>
 
