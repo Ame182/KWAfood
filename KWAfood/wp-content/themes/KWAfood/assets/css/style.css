@@ -98,72 +98,8 @@ nav .container ul last-child li{
 }
 
 /* PROMOCIONES */
-.lun{
-	position: absolute;
-	bottom: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	opacity: 7;
-	color: #fff;
-	background: rgba(240, 95, 64, 0.9);
-	padding: 25px;
-}
 
-.mar{
-	position: absolute;
-	bottom: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	opacity: 7;
-	color: #fff;
-	background: rgba(240, 95, 64, 0.9);
-	padding: 25px;
-}
-
-.mie{
-	position: absolute;
-	bottom: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	opacity: 7;
-	color: #fff;
-	background: rgba(240, 95, 64, 0.9);
-	padding: 25px;
-}
-
-.jue{
-	position: absolute;
-	bottom: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	opacity: 7;
-	color: #fff;
-	background: rgba(240, 95, 64, 0.9);
-	padding: 25px;
-}
-
-.vie{
-	position: absolute;
-	bottom: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	opacity: 7;
-	color: #fff;
-	background: rgba(240, 95, 64, 0.9);
-	padding: 25px;
-}
-
-.sa{
+.di{
 	position: absolute;
 	bottom: 0;
 	display: block;
@@ -178,6 +114,7 @@ nav .container ul last-child li{
 
 .hide {
     display: none;
+
 }
 
 
@@ -188,67 +125,37 @@ nav .container ul last-child li{
 	border-width: 0.1px; 
 	padding: 10px;
 	display: inline-block;
+	background-repeat: no-repeat;
+	object-position: 80%;
+	background-size: 70%;
+	object-fit: cover;
+	overflow: hidden;
+	background-position: center;
 }
 
 
 .l{
-	background-image: url(../images/lunes.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/lunes.svg);	
 }
 
 .m{
-	background-image: url(../images/martes.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/martes.svg);	
 }
 
 .mi{
-	background-image: url(../images/miercoles.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/miercoles.svg);	
 }
 
 .ju{
-	background-image: url(../images/jueves.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/jueves.svg);	
 }
 
 .vi{
-	background-image: url(../images/viernes.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/viernes.svg);	
 }
 
 .sado{
-	background-image: url(../images/sabadom.svg);
-	background-repeat: no-repeat;
-	object-position: 80%;
-	background-size: 70%;
-	object-fit: cover;
-	overflow: hidden;
-	background-position: center;
+	background-image: url(../images/sabadom.svg);	
 }
 
 .contact{
@@ -260,14 +167,47 @@ nav .container ul last-child li{
 	padding: 10px;
 }
 
-/* Termina el Fast Menu*/
+/* Termina Las Promociones*/
+.titulo{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-position: center;
+	position: relative;
+	display: block;
+}
 
 .title {
+	position: relative;
 	padding-top: 40px;
 	margin: auto;
 	display: block;
+	z-index: -4;
+}
 
+.titulo span{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	font-size: 3rem;
+	font-weight: bold;
+	display: inline-block;
+	z-index: 10;
+	color: white;
+	text-align: center;
+	object-position: center;
+	padding-top: 60px;
+	margin-left: -25px;
+}
 
+.tituloblog{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-position: center;
+	position: relative;
+	display: block;
+	padding-top: 20px;
 }
 
 .lacarta-box {
@@ -412,7 +352,7 @@ footer i{
 }
 
 .blog{
-  	margin-top:100px;
+
   	margin-left: 30px;
   	padding-top: 20px;
   	padding-left: 50px;
@@ -517,3 +457,10 @@ div#post-jumbotron{
 
 }
 
+/*Galeria */
+.galeria {
+  width: 100%;
+  height: 600px;
+  margin: 10px;
+
+}

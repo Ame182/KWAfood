@@ -6,36 +6,12 @@ $(document).ready(function() {
   });
 
 
-    $(".dia.m").hover( function(e) {
+    $(".dia").hover( function(e) {
 		e.preventDefault()
-    	$('.hide.mar').toggle('hide')
+    	$(this).find('.hide').toggle('hide')
 
     });
 
-    $(".dia.mi").hover( function(e) {
-		e.preventDefault()
-    	$('.hide.mie').toggle('hide')
-
-    });
-
-    $(".dia.ju").hover( function(e) {
-		e.preventDefault()
-    	$('.hide.jue').toggle('hide')
-
-    });
-
-    $(".dia.vi").hover( function(e) {
-		e.preventDefault()
-    	$('.hide.vie').toggle('hide')
-
-    });
-
-    $(".dia.sado").hover( function(e) {
-		e.preventDefault()
-    	$('.hide.sa').toggle('hide')
-
-	});
-   
     
 
 
@@ -100,4 +76,8 @@ $('.title').hover(function () {
 //AOS
 AOS.init();
 
+
+//galeria
+// Bind as an event handler
+$(document).on('click', '[data-lightbox]', lity);
 

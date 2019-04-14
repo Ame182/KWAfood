@@ -30,56 +30,54 @@
 
 <!-- fast menu -->
 <section class="p-0" id="fastmenu">
-	<div class="container-fluid">
-		<div class="row fast">
-			<div class="col-lg-2 col-md-6 dia l" data-page="lunes">
-				<div class="di hide lun">
-					<h2>2x1</h2>
-					<h4>EMPANADAS</h4>
+		<div class="container-fluid">
+			<div class="row fast">
+				<div class="col-lg-2 col-md-6 dia l" data-page="lunes">
+					<div class="di hide lun">
+						<h4><?php the_field('promo_lunes'); ?></h4>
+					</div>
+				</div>	
+				<div class="col-lg-2 col-md-6 dia m" data-page=" martes">
+					<div class="di hide mar">
+						<h4><?php the_field('promo_martes'); ?></h4>	
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 dia mi" data-page=" miercoles">
+					<div class="di hide mie">
+						<h4><?php the_field('promo_miercoles'); ?></h4>
+					</div>					
+				</div>
+				<div class="col-lg-2 col-md-6 dia ju" data-page=" jueves">
+					<div class="di hide jue">
+						<h4><?php the_field('promo_jueves'); ?></h4>
+					</div>					
+				</div>
+				<div class="col-lg-2 col-md-6 dia vi" data-page=" viernes">
+					<div class="di hide vie">
+						<h4><?php the_field('promo_viernes'); ?></h4>
+					</div>					
+				</div>
+				<div class="col-lg-2 col-md-6 dia sado" data-page=" sabadom">
+					<div class="di hide sa">
+						<h4><?php the_field('promo_sado'); ?></h4>
+					</div>					
 				</div>
 			</div>	
-			<div class="col-lg-2 col-md-6 dia m" data-page=" martes">
-				<div class="di hide mar">
-					<h2>BEBIDAS GRATIS</h2>
-					
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-6 dia mi" data-page=" miercoles">
-				<div class="di hide mie">
-					<h2>$2.600</h2>
-					<h4>SANDWICH + BEBIDA</h4>
-				</div>					
-			</div>
-			<div class="col-lg-2 col-md-6 dia ju" data-page=" jueves">
-				<div class="di hide jue">
-					<h2>$4.000</h2>
-					<h4>10 TEQUEÑOS</h4>
-				</div>					
-			</div>
-			<div class="col-lg-2 col-md-6 dia vi" data-page=" viernes">
-				<div class="di hide vie">
-					<h2>2x1</h2>
-					<h4>ESALADAS</h4>
-				</div>					
-			</div>
-			<div class="col-lg-2 col-md-6 dia sado" data-page=" sabadom">
-				<div class="di hide sa">
-					<h2>$3.000</h2>
-					<h4>SOPA, SECO Y JUGO</h4>
-				</div>					
-			</div>
-		</div>	
-	</div>
+		</div>
 
 </section>
+
 
 <!-- Comienza la Carta -->
 <section class="p-0" id="lacarta">
   <div class="container-fluid p-0">
     <hr class="my-4">
-    <div class="row lacar">
-    	 <img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/lacarta.svg">
-    </div>
+	<div class="container titulo">
+		<div class="row">
+			<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+			<span><?php the_field('la_carta'); ?></span>
+		</div>
+	</div>
     <div class="row no-gutters popup-gallery">
 
       <?php
@@ -121,8 +119,11 @@
 <!-- Comienza el NOSOTROS -->
 <section class="nosotros" id="us">
 	<div class="container">
-		<div class="row usTitulo">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/nosotros.svg" class="title" alt="">
+		<div class="container titulo">
+			<div class="row">
+				<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+				<span><?php the_field('historia'); ?></span>
+			</div>
 		</div>
 		<div class="row us">
 			<div class="col-md-6" id="nosotros">
@@ -130,7 +131,7 @@
 			<p><?php the_field('nosotros'); ?></p>	
 			</div>
 			<div class="col-md-6" id="nosotrosImg">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Plaza_Bolívar_de_Cagua.jpg" alt="plaza de Cagua">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/cagua.jpg" alt="plaza de Cagua">
 			</div>
 		</div>
 	</div>	
@@ -140,8 +141,11 @@
 <!-- CONTACTOS -->
 <section id="contact">
 	<div class="container-fluid">
-		<div class="row contacto">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contacto.png" class="title animated bounce" alt="">
+		<div class="container titulo">
+			<div class="row">
+				<img class="title section-heading text-center p-6" src="<?php echo get_template_directory_uri(); ?>/assets/images/titulo.png">
+				<span><?php the_field('contacto'); ?></span>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-5 rrss">
