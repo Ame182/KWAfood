@@ -1,0 +1,461 @@
+html{
+ scroll-behavior: smooth;
+ 
+}
+body{
+	background-image: url();
+	object-position: 50% 50%;
+	object-fit: cover;
+	font-family: 'Raleway', sans-serif;
+}
+
+img{
+	filter: brightness(1.1);
+
+}
+
+nav{
+	height: 50px;
+	z-index: 9;
+	background-color: rgba(255,255,255,0.8);
+}
+
+nav .container{
+	width: 100%;
+	margin-left: 70px;
+}
+
+nav .container ul li{
+	padding: 5px;
+}
+
+nav .container ul last-child li{
+	color: white;
+}
+
+
+.collapse{
+	padding-left: 50%;
+}
+
+
+#navlogo{
+	position: absolute;
+	margin-top: -25px;
+	margin-left: 20px;
+	border-bottom-right-radius: 10%;
+	border-bottom-left-radius: 10%;
+}
+
+.magictime {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.puffIn {
+  -webkit-animation-name: puffIn;
+          animation-name: puffIn;
+}
+
+#logoAbsoluto {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 300;
+}
+
+/* Fast Menu */
+.fast{
+	margin-top: 15px;
+}
+
+.fast i{
+	font-size: 40px;
+	color: black;
+	text-align: center;
+	display: block;
+}
+
+.carta{
+	height: 20vh;
+	border-style: solid;
+	border-color: grey;
+	border-width: 0.1px;
+	margin: 5px;
+	margin-left: 10%;
+	padding: 10px;
+}
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+	.fast div{
+		width: 100vw;
+		margin: 5px;
+		margin-left: 5px; 
+	}
+
+}
+
+/* PROMOCIONES */
+
+.di{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 7;
+	color: #fff;
+	background: rgba(240, 95, 64, 0.9);
+	padding: 25px;
+}
+
+.hide {
+    display: none;
+
+}
+
+
+.dia{
+	height: 20vh;
+	border-style: solid;
+	border-color: grey;
+	border-width: 0.1px; 
+	padding: 10px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	object-position: 80%;
+	background-size: 70%;
+	object-fit: cover;
+	overflow: hidden;
+	background-position: center;
+}
+
+
+.l{
+	background-image: url(../images/lunes.svg);	
+}
+
+.m{
+	background-image: url(../images/martes.svg);	
+}
+
+.mi{
+	background-image: url(../images/miercoles.svg);	
+}
+
+.ju{
+	background-image: url(../images/jueves.svg);	
+}
+
+.vi{
+	background-image: url(../images/viernes.svg);	
+}
+
+.sado{
+	background-image: url(../images/sabadom.svg);	
+}
+
+.contact{
+	height: 20vh;
+	border-style: solid;
+	border-color: grey;
+	border-width: 0.1px;
+	margin: 5px;
+	padding: 10px;
+}
+
+/* Termina Las Promociones*/
+.titulo{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-position: center;
+	position: relative;
+	display: block;
+}
+
+.title {
+	position: relative;
+	padding-top: 40px;
+	margin: auto;
+	display: block;
+	z-index: -4;
+}
+
+.titulo span{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	font-size: 3rem;
+	font-weight: bold;
+	display: inline-block;
+	z-index: 10;
+	color: white;
+	text-align: center;
+	object-position: center;
+	padding-top: 60px;
+	margin-left: -25px;
+}
+
+.tituloblog{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	object-position: center;
+	position: relative;
+	display: block;
+	padding-top: 20px;
+}
+
+.lacarta-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.lacarta-box .lacarta-box-caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(240, 95, 64, 0.9);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.lacarta-box .lacarta-box-caption .lacarta-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-category,
+.lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-name {
+  padding: 0 15px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-category {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-name {
+  font-size: 18px;
+}
+
+.lacarta-box:hover .lacarta-box-caption {
+  opacity: 1;
+}
+
+.lacarta-box:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .lacarta-box .lacarta-box-caption .lacarta-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+
+.us{
+	padding: 30px;
+}
+
+#nosotrosImg img {
+	background-repeat: no-repeat;
+	position: center;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.coment{
+	background-color: black;
+	height: 100%;
+	padding: 30px;
+	color: white;
+	border-radius: 2%;
+	margin-top: 20px;
+}
+
+.instagram{
+	width: 100%;
+	height: 300px;
+}
+
+.coment h2{
+	padding: 20px;
+	text-align: center;
+}
+
+.coment form{
+	margin-top: 50px;
+}
+
+.recentco{
+	width: 100%
+}
+
+iframe{
+	filter: grayscale(100%);
+	margin-top: -20px;
+	width: 100%;
+}
+
+
+footer{
+	background-color: #000000;
+	height: 100%;
+	color: white;
+	margin: 0px;
+}
+
+.fono{
+	padding-top: 20px;
+	padding-left: 250px;
+}
+
+footer .media-list{
+	font-size: 1.5rem;
+	display: inline-block;
+	padding-top: 15px;
+	margin-left: 20px;
+}
+
+
+.logofooter{
+	padding-left: 100px;
+}
+
+footer i{
+	color: white;
+}
+
+.img-thumbnail {
+	margin-left: 20px;
+}
+
+.blog{
+
+  	margin-left: 30px;
+  	padding-top: 20px;
+  	padding-left: 50px;
+  	text-align: justify;
+}
+
+.blog h2{
+  	text-align: center;
+  	font-size: 3rem;
+}
+
+.antiguo{
+	background-color: rgba(000,000,000,0.1);
+	border-radius: 1%; 
+	margin: 0;
+	padding: 0;
+}
+
+.antiguo h4{
+	text-align: center;
+}
+
+.old{
+	float: left;
+	padding-top: 40px;
+}
+
+div.infoExtra {
+  	display:none;
+}
+
+.leerMas { 
+	color:blue; 
+	cursor:pointer; 
+	display:inline;
+}
+
+.leerMas:hover {
+	color:purple;
+	 text-decoration:underline;
+}
+
+#news{
+	width: 100%;
+	object-position: center;
+	padding: 40px, 0px, 40px, 40px;
+
+}
+
+
+.gallery{
+	padding: 40px;
+	margin-bottom: 60px;
+
+}
+
+
+.gall{
+	filter: saturate(40%);
+} 
+
+.galle{
+	height: 80vh;
+	margin-top: 30px;
+}
+
+.gal{
+	height: 900px;
+}
+.satura{
+	filter: saturate(100%);
+	transition: 1s;
+
+}
+
+div#post-jumbotron{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.jumbotron {
+	height: 300px;
+}
+
+#menu-mi_menu li a{
+	color: black;
+	padding: 2px;
+	width: 100%;
+}
+
+#menu-item-32{
+	color: white;
+	width: 80px;
+
+}
+
+/*Galeria */
+.galeria {
+  width: 100%;
+  height: 600px;
+  margin: 10px;
+
+}
