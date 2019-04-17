@@ -45,6 +45,8 @@ Repositorio: https://github.com/Ame182/KWAfood
 -Información del sitio:
 	Todo el texto del sitio es original y real del restaurante. Vayan y visitenlo que la comida es deliciosa.
 
+-Tuvimos problemas con los servidores, a la hora de intentar subir a produccion el FTP no conectaba, despues de miles intentos logramos conectarlo, pero al intentar entrar en el cPanel no pudimos avanzar porque mostraba pagina con adevertencia.
+
 
 Saludos!
 
